@@ -12,7 +12,7 @@
 /*组合图*/
 import UIKit
 import Charts
-class CombinedChartVC: UIViewController {
+class CombinedChartVC: BaseVC {
     let months = ["Jan", "Feb", "Mar",
                   "Apr", "May", "Jun",
                   "Jul", "Aug", "Sep",
@@ -20,9 +20,8 @@ class CombinedChartVC: UIViewController {
     var combinedChartView: CombinedChartView  = CombinedChartView()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = ZHFColor.white
-        //1.添加混合图和刷新按钮
-        addCombinedChartAndRefreshBtn()
+        //1.添加混合图
+        addCombinedChart()
         //2.基本样式
          setCombinedChartViewBaseStyle()
         //3.添加（刷新数据）
@@ -31,23 +30,15 @@ class CombinedChartVC: UIViewController {
 }
 //MARK:- UI和组合图基本样式
 extension CombinedChartVC{
-    //添加组合线图和刷新按钮
-    func addCombinedChartAndRefreshBtn(){
+    //添加组合线图
+    func addCombinedChart(){
         combinedChartView.backgroundColor = ZHFColor.white
-        combinedChartView.frame.size = CGSize.init(width: 300, height: 300)
+        combinedChartView.frame.size = CGSize.init(width: ScreenWidth - 20, height: 300)
         combinedChartView.center = self.view.center
         combinedChartView.delegate = self
         self.view.addSubview(combinedChartView)
-        //添加刷新按钮
-        let btn: UIButton = UIButton.init(type: UIButtonType.custom)
-        btn.frame = CGRect.init(x: 30, y: 84, width: 40, height: 25)
-        btn.setTitle("刷新", for: UIControlState.normal)
-        btn.backgroundColor = ZHFColor.red
-        btn.setTitleColor(ZHFColor.zhf33_titleTextColor, for: UIControlState.normal)
-        btn.layer.cornerRadius = 5
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 13)
-        btn.addTarget(self, action: #selector(updataData), for: UIControlEvents.touchUpInside)
-        self.view.addSubview(btn)
+        //刷新按钮响应
+        refreshrBtn.addTarget(self, action: #selector(updataData), for: UIControlEvents.touchUpInside)
     }
     func setCombinedChartViewBaseStyle(){
         //混合图描述

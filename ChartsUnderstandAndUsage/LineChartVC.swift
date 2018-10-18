@@ -12,15 +12,13 @@
 /*折线图*/
 import UIKit
 import Charts
-class LineChartVC: UIViewController {
+class LineChartVC: BaseVC {
     var circleColors :[UIColor] = [UIColor]()
     var lineChartView: LineChartView  = LineChartView()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = ZHFColor.white
-        //1.添加折线和刷新按钮
-        addLineChartAndRefreshBtn()
-        
+        //1.添加折线
+        addLineChart()
         //2. 基本样式
         //折线图描述文字和样式
         chartDescription()
@@ -41,23 +39,15 @@ class LineChartVC: UIViewController {
 }
 //MARK:- UI和折线图基本样式
 extension LineChartVC{
-    //添加折线和刷新按钮
-    func addLineChartAndRefreshBtn(){
+    //添加折线
+    func addLineChart(){
         lineChartView.backgroundColor = ZHFColor.white
-        lineChartView.frame.size = CGSize.init(width: 300, height: 300)
+        lineChartView.frame.size = CGSize.init(width: ScreenWidth - 20, height: 300)
         lineChartView.center = self.view.center
         lineChartView.delegate = self
         self.view.addSubview(lineChartView)
-        //添加刷新按钮
-        let btn: UIButton = UIButton.init(type: UIButtonType.custom)
-        btn.frame = CGRect.init(x: 30, y: 84, width: 40, height: 25)
-        btn.setTitle("刷新", for: UIControlState.normal)
-        btn.backgroundColor = ZHFColor.red
-        btn.setTitleColor(ZHFColor.zhf33_titleTextColor, for: UIControlState.normal)
-        btn.layer.cornerRadius = 5
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 13)
-        btn.addTarget(self, action: #selector(updataData), for: UIControlEvents.touchUpInside)
-        self.view.addSubview(btn)
+        //刷新按钮响应
+        refreshrBtn.addTarget(self, action: #selector(updataData), for: UIControlEvents.touchUpInside)
     }
     //设置交互样式
     func interactionStyle(){

@@ -12,36 +12,27 @@
 /*半个饼状图*/
 import UIKit
 import Charts
-class PieChartHalfVC: UIViewController {
+class PieChartHalfVC: BaseVC {
     var pieChartView: PieChartView  = PieChartView()
     var data: PieChartData = PieChartData()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = ZHFColor.white
-           //添加饼状图和刷新按钮
-        addPieChartAndRefreshBtn()
+        //1.添加饼状图
+        addPieChart()
         //2.设置基本样式
         setBarChartViewBaseStyle()
         //3.添加（刷新数据）
         updataData()
     }
-    //添加饼状图和刷新按钮
-    func addPieChartAndRefreshBtn(){
+    //添加饼状图
+    func addPieChart(){
         pieChartView.backgroundColor = ZHFColor.white
         pieChartView.frame.size = CGSize.init(width: ScreenWidth, height: 300)
         pieChartView.center = self.view.center
         pieChartView.delegate = self
         self.view.addSubview(pieChartView)
-        //添加刷新按钮
-        let btn: UIButton = UIButton.init(type: UIButtonType.custom)
-        btn.frame = CGRect.init(x: 30, y: 84, width: 40, height: 25)
-        btn.setTitle("刷新", for: UIControlState.normal)
-        btn.backgroundColor = ZHFColor.red
-        btn.setTitleColor(ZHFColor.zhf33_titleTextColor, for: UIControlState.normal)
-        btn.layer.cornerRadius = 5
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 13)
-        btn.addTarget(self, action: #selector(updataData), for: UIControlEvents.touchUpInside)
-        self.view.addSubview(btn)
+        //刷新按钮响应
+        refreshrBtn.addTarget(self, action: #selector(updataData), for: UIControlEvents.touchUpInside)
     }
     func setBarChartViewBaseStyle(){
         //基本样式

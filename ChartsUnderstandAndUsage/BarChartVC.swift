@@ -12,39 +12,30 @@
 /*柱状图*/
 import UIKit
 import Charts
-class BarChartVC: UIViewController {
+class BarChartVC: BaseVC {
     var barChartView: BarChartView = BarChartView()
     lazy var xVals: NSMutableArray = NSMutableArray.init()
     var data: BarChartData = BarChartData()
     let axisMaximum :Double = 100
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = ZHFColor.white
-        //添加柱状图和刷新按钮
-        addBarChartViewAndRefreshBtn()
+        //添加柱状图
+        addBarChartView()
         //设置基本样式
         setBarChartViewBaseStyle()
         //设置X轴，Y轴样式
         setBarChartViewXY()
         
     }
-    //添加柱状图和刷新按钮
-    func addBarChartViewAndRefreshBtn(){
+    //添加柱状图
+    func addBarChartView(){
         barChartView.backgroundColor = ZHFColor.white
         barChartView.frame.size = CGSize.init(width: ScreenWidth - 20, height: 300)
         barChartView.center = self.view.center
         barChartView.delegate = self
         self.view.addSubview(barChartView)
-        //添加刷新按钮
-        let btn: UIButton = UIButton.init(type: UIButtonType.custom)
-        btn.frame = CGRect.init(x: 30, y: 84, width: 40, height: 25)
-        btn.setTitle("刷新", for: UIControlState.normal)
-        btn.backgroundColor = ZHFColor.red
-        btn.setTitleColor(ZHFColor.zhf33_titleTextColor, for: UIControlState.normal)
-        btn.layer.cornerRadius = 5
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 13)
-        btn.addTarget(self, action: #selector(updataData), for: UIControlEvents.touchUpInside)
-        self.view.addSubview(btn)
+        //刷新按钮响应
+        refreshrBtn.addTarget(self, action: #selector(updataData), for: UIControlEvents.touchUpInside)
     }
     func setBarChartViewBaseStyle(){
         //基本样式

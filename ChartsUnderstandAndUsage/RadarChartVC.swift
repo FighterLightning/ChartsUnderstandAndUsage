@@ -11,7 +11,7 @@
 /*雷达图*/
 import UIKit
 import Charts
-class RadarChartVC: UIViewController {
+class RadarChartVC: BaseVC {
     var radarChartView: RadarChartView  = RadarChartView()
     var data: RadarChartData = RadarChartData()
     let axisMaximum :Double = 150
@@ -19,28 +19,20 @@ class RadarChartVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = ZHFColor.yellow
-        //添加雷达图和刷新按钮
-        addRadarChartAndRefreshBtn()
+        //添加雷达图
+        addRadarChart()
         //设置基本样式
         setRadarChartViewBaseStyle()
     }
-   //添加雷达图和刷新按钮
-    func addRadarChartAndRefreshBtn(){
+   //添加雷达图
+    func addRadarChart(){
         radarChartView.backgroundColor = ZHFColor.white
-        radarChartView.frame.size = CGSize.init(width: 300, height: 300)
+        radarChartView.frame.size = CGSize.init(width: ScreenWidth - 20, height: 300)
         radarChartView.center = self.view.center
         radarChartView.delegate = self
         self.view.addSubview(radarChartView)
-        //添加刷新按钮
-        let btn: UIButton = UIButton.init(type: UIButtonType.custom)
-        btn.frame = CGRect.init(x: 30, y: 84, width: 40, height: 25)
-        btn.setTitle("刷新", for: UIControlState.normal)
-        btn.backgroundColor = ZHFColor.red
-        btn.setTitleColor(ZHFColor.zhf33_titleTextColor, for: UIControlState.normal)
-        btn.layer.cornerRadius = 5
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 13)
-        btn.addTarget(self, action: #selector(updataData), for: UIControlEvents.touchUpInside)
-        self.view.addSubview(btn)
+        //刷新按钮响应
+        refreshrBtn.addTarget(self, action: #selector(updataData), for: UIControlEvents.touchUpInside)
     }
     func setRadarChartViewBaseStyle(){
         //雷达图描述

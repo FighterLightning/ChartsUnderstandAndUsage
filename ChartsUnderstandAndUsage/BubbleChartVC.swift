@@ -12,39 +12,28 @@
 /*气泡图*/
 import UIKit
 import Charts
-class BubbleChartVC: UIViewController {
+class BubbleChartVC: BaseVC {
     var bubbleChartView: BubbleChartView  = BubbleChartView()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = ZHFColor.white
-        //1.添加气泡图和刷新按钮
-        addBubbleChartAndRefreshBtn()
-        
+        //1.添加气泡图
+        addBubbleChart()
         //2. 基本样式
         setBubbleChartViewBaseStyle()
-        
         //3.添加（刷新数据）
         updataData()
     }
 }
 extension BubbleChartVC{
-    //添加气泡图和刷新按钮
-    func addBubbleChartAndRefreshBtn(){
+    //添加气泡图
+    func addBubbleChart(){
         bubbleChartView.backgroundColor = ZHFColor.white
-        bubbleChartView.frame.size = CGSize.init(width: 300, height: 300)
+        bubbleChartView.frame.size = CGSize.init(width: ScreenWidth - 20, height: 300)
         bubbleChartView.center = self.view.center
         bubbleChartView.delegate = self
         self.view.addSubview(bubbleChartView)
-        //添加刷新按钮
-        let btn: UIButton = UIButton.init(type: UIButtonType.custom)
-        btn.frame = CGRect.init(x: 30, y: 84, width: 40, height: 25)
-        btn.setTitle("刷新", for: UIControlState.normal)
-        btn.backgroundColor = ZHFColor.red
-        btn.setTitleColor(ZHFColor.zhf33_titleTextColor, for: UIControlState.normal)
-        btn.layer.cornerRadius = 5
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 13)
-        btn.addTarget(self, action: #selector(updataData), for: UIControlEvents.touchUpInside)
-        self.view.addSubview(btn)
+        //刷新按钮响应
+        refreshrBtn.addTarget(self, action: #selector(updataData), for: UIControlEvents.touchUpInside)
     }
     func setBubbleChartViewBaseStyle(){
         //气泡图描述

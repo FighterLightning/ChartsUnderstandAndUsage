@@ -12,39 +12,28 @@
 /*散点图*/
 import UIKit
 import Charts
-class ScatterChartVC: UIViewController {
+class ScatterChartVC: BaseVC {
     var scatterChartView: ScatterChartView  = ScatterChartView()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = ZHFColor.white
-        //1.添加折线和刷新按钮
-        addScatterChartAndRefreshBtn()
-        
+        //1.添加散点图
+        addScatterChart()
         //2. 基本样式
         setScatterChartViewBaseStyle()
-        
         //3.添加（刷新数据）
         updataData()
     }
 }
 extension ScatterChartVC{
-    //添加散点图和刷新按钮
-    func addScatterChartAndRefreshBtn(){
+    //添加散点图
+    func addScatterChart(){
         scatterChartView.backgroundColor = ZHFColor.white
-        scatterChartView.frame.size = CGSize.init(width: 300, height: 300)
+        scatterChartView.frame.size = CGSize.init(width: ScreenWidth - 20, height: 300)
         scatterChartView.center = self.view.center
         scatterChartView.delegate = self
         self.view.addSubview(scatterChartView)
-        //添加刷新按钮
-        let btn: UIButton = UIButton.init(type: UIButtonType.custom)
-        btn.frame = CGRect.init(x: 30, y: 84, width: 40, height: 25)
-        btn.setTitle("刷新", for: UIControlState.normal)
-        btn.backgroundColor = ZHFColor.red
-        btn.setTitleColor(ZHFColor.zhf33_titleTextColor, for: UIControlState.normal)
-        btn.layer.cornerRadius = 5
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 13)
-        btn.addTarget(self, action: #selector(updataData), for: UIControlEvents.touchUpInside)
-        self.view.addSubview(btn)
+        //刷新按钮响应
+        refreshrBtn.addTarget(self, action: #selector(updataData), for: UIControlEvents.touchUpInside)
     }
     func setScatterChartViewBaseStyle(){
         //散点图描述

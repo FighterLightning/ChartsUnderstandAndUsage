@@ -12,39 +12,28 @@
 /*K 线图（烛形图）*/
 import UIKit
 import Charts
-class CandleStickChartVC: UIViewController {
+class CandleStickChartVC: BaseVC {
     var candleStickChartView: CandleStickChartView  = CandleStickChartView()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = ZHFColor.white
-        //1.添加K 线图（烛形图）和刷新按钮
-        addCandleStickChartAndRefreshBtn()
-        
+        //1.添加K 线图（烛形图)
+        addCandleStickChart()
         //2. 基本样式
         setCandleStickChartViewBaseStyle()
-        
         //3.添加（刷新数据）
         updataData()
     }
 }
 extension CandleStickChartVC{
-    //添加K 线图（烛形图）和刷新按钮
-    func addCandleStickChartAndRefreshBtn(){
+    //添加K 线图（烛形图）
+    func addCandleStickChart(){
         candleStickChartView.backgroundColor = ZHFColor.white
-        candleStickChartView.frame.size = CGSize.init(width: 300, height: 300)
+        candleStickChartView.frame.size = CGSize.init(width: ScreenWidth - 20, height: 300)
         candleStickChartView.center = self.view.center
         candleStickChartView.delegate = self
         self.view.addSubview(candleStickChartView)
-        //添加刷新按钮
-        let btn: UIButton = UIButton.init(type: UIButtonType.custom)
-        btn.frame = CGRect.init(x: 30, y: 84, width: 40, height: 25)
-        btn.setTitle("刷新", for: UIControlState.normal)
-        btn.backgroundColor = ZHFColor.red
-        btn.setTitleColor(ZHFColor.zhf33_titleTextColor, for: UIControlState.normal)
-        btn.layer.cornerRadius = 5
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 13)
-        btn.addTarget(self, action: #selector(updataData), for: UIControlEvents.touchUpInside)
-        self.view.addSubview(btn)
+        //刷新按钮响应
+        refreshrBtn.addTarget(self, action: #selector(updataData), for: UIControlEvents.touchUpInside)
     }
     func setCandleStickChartViewBaseStyle(){
         //K 线图（烛形图）描述
