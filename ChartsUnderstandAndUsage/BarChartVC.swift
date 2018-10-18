@@ -13,6 +13,7 @@
 import UIKit
 import Charts
 class BarChartVC: BaseVC {
+    //默认是垂直方向 把下面这一行的 BarChartView 改为 HorizontalBarChartView 即为水平方向
     var barChartView: BarChartView = BarChartView()
     lazy var xVals: NSMutableArray = NSMutableArray.init()
     var data: BarChartData = BarChartData()

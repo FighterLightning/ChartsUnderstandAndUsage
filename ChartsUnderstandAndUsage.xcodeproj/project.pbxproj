@@ -16,6 +16,8 @@
 		E35A39C0214F676B002B545A /* CandleStickChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35A39BF214F676B002B545A /* CandleStickChartVC.swift */; };
 		E35A39C62150BDE0002B545A /* LineFilledChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35A39C52150BDE0002B545A /* LineFilledChartVC.swift */; };
 		E3800A812178579E007C9744 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3800A802178579E007C9744 /* BaseVC.swift */; };
+		E3800A8621785EDC007C9744 /* PieChartPolylineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3800A8521785EDC007C9744 /* PieChartPolylineVC.swift */; };
+		E3800A8A217867C9007C9744 /* BarChartWaveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3800A89217867C9007C9744 /* BarChartWaveVC.swift */; };
 		E38958422149054700B960CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38958412149054700B960CD /* AppDelegate.swift */; };
 		E38958442149054700B960CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38958432149054700B960CD /* ViewController.swift */; };
 		E38958472149054700B960CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E38958452149054700B960CD /* Main.storyboard */; };
@@ -60,6 +62,8 @@
 		E35A39BF214F676B002B545A /* CandleStickChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleStickChartVC.swift; sourceTree = "<group>"; };
 		E35A39C52150BDE0002B545A /* LineFilledChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineFilledChartVC.swift; sourceTree = "<group>"; };
 		E3800A802178579E007C9744 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		E3800A8521785EDC007C9744 /* PieChartPolylineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartPolylineVC.swift; sourceTree = "<group>"; };
+		E3800A89217867C9007C9744 /* BarChartWaveVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartWaveVC.swift; sourceTree = "<group>"; };
 		E389583E2149054700B960CD /* ChartsUnderstandAndUsage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChartsUnderstandAndUsage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38958412149054700B960CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E38958432149054700B960CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -148,8 +152,10 @@
 				E38958432149054700B960CD /* ViewController.swift */,
 				E3800A802178579E007C9744 /* BaseVC.swift */,
 				E3895871214910AC00B960CD /* BarChartVC.swift */,
+				E3800A89217867C9007C9744 /* BarChartWaveVC.swift */,
 				E3895877214A521B00B960CD /* PieChartVC.swift */,
 				E330184D2151FE3200151C8B /* PieChartHalfVC.swift */,
+				E3800A8521785EDC007C9744 /* PieChartPolylineVC.swift */,
 				E3895879214A650A00B960CD /* RadarChartVC.swift */,
 				E35A39B7214F668F002B545A /* LineChartVC.swift */,
 				E35A39C52150BDE0002B545A /* LineFilledChartVC.swift */,
@@ -366,12 +372,14 @@
 			files = (
 				E389587A214A650A00B960CD /* RadarChartVC.swift in Sources */,
 				E35A39C62150BDE0002B545A /* LineFilledChartVC.swift in Sources */,
+				E3800A8A217867C9007C9744 /* BarChartWaveVC.swift in Sources */,
 				E35A39BC214F6711002B545A /* ScatterChartVC.swift in Sources */,
 				E35A39C0214F676B002B545A /* CandleStickChartVC.swift in Sources */,
 				E3800A812178579E007C9744 /* BaseVC.swift in Sources */,
 				E3C36A5F2150FF1B00439354 /* BalloonMarker.swift in Sources */,
 				E330184E2151FE3200151C8B /* PieChartHalfVC.swift in Sources */,
 				E35A39B8214F668F002B545A /* LineChartVC.swift in Sources */,
+				E3800A8621785EDC007C9744 /* PieChartPolylineVC.swift in Sources */,
 				E3895870214909D300B960CD /* ZHFColor.swift in Sources */,
 				E38958442149054700B960CD /* ViewController.swift in Sources */,
 				E35A39BA214F66E9002B545A /* CombinedChartVC.swift in Sources */,

@@ -23,8 +23,10 @@ class ViewController: UIViewController {
     var tableView:UITableView!
     private var ItemMessages =
         [ItemMessage.init(title: "柱状图", subtitle: "Bar Chart(A simple demonstration of the bar chart.)", imageName: "barChartImage", class: BarChartVC.self),
+        ItemMessage.init(title: "柱状图(波浪图)", subtitle: "Bar Chart Wave(A simple demonstration of the bar chart.)", imageName: "barChartWaveImage", class: BarChartWaveVC.self),
          ItemMessage.init(title: "饼状图", subtitle: "Pie Chart(A simple demonstration of the pie chart.)", imageName: "pieChartImage", class: PieChartVC.self),
          ItemMessage.init(title: "饼状图（半圆形）", subtitle: "Half Pie Chart (A simple demonstration of the pie chart.)", imageName: "pieChartHalfImage", class: PieChartHalfVC.self),
+         ItemMessage.init(title: "饼状图(折线注释)", subtitle: "Polyline Pie Chart(A simple demonstration of the pie chart with polyline notes.)", imageName: "pieChartPolylineImage", class: PieChartPolylineVC.self),
          ItemMessage.init(title: "雷达图", subtitle: "Radar Chart(Demonstrates the use of a spider-web like (net) chart.)", imageName: "radarChartImage", class: RadarChartVC.self),
          ItemMessage.init(title: "折线图", subtitle: "Line Chart(A simple demonstration of the linechart.)", imageName: "lineChartImage", class: LineChartVC.self),
          ItemMessage.init(title: "折线填充图", subtitle: "Line Filled Chart(This demonstrates how to fill an area between two LineDataSets.)", imageName: "lineFilledChartImage", class: LineFilledChartVC.self),
