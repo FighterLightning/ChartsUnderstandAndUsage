@@ -33,7 +33,8 @@ class ViewController: UIViewController {
          ItemMessage.init(title: "散点图", subtitle: "Scatter Chart(A simple demonstration of the scatter chart.)", imageName: "scatterChartImage", class: ScatterChartVC.self),
          ItemMessage.init(title: "K 线图（烛形图）", subtitle: "CandleStick Chart(Demonstrates usage of the CandleStickChart.)", imageName: "candleStickChartImage", class: CandleStickChartVC.self),
          ItemMessage.init(title: "气泡图", subtitle: "Bubble Chart(A simple demonstration of the bubble chart.)", imageName: "bubbleChartImage", class: BubbleChartVC.self),
-         ItemMessage.init(title: "组合图(混合图)", subtitle: "Combined Chart(Demonstrates how to create a combined chart (bar and line in this case).", imageName: "combinedChartImage", class: CombinedChartVC.self),]
+         ItemMessage.init(title: "组合图(混合图)", subtitle: "Combined Chart(Demonstrates how to create a combined chart (bar and line in this case).", imageName: "combinedChartImage", class: CombinedChartVC.self),
+         ItemMessage.init(title: "波浪图", subtitle: "Waveform Chart(根据一组Hz数据，只给最高点画波浪)", imageName: "waveformChartImage", class: WaveformChartVC.self),]
     lazy var dataMarr:NSMutableArray = NSMutableArray()
     override func viewDidLoad() {
         super.viewDidLoad()

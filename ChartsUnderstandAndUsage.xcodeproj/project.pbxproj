@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		094F73FE91B1045A7744156A /* Pods_ChartsUnderstandAndUsage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2986C8E69D024580F6229424 /* Pods_ChartsUnderstandAndUsage.framework */; };
 		E330184E2151FE3200151C8B /* PieChartHalfVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E330184D2151FE3200151C8B /* PieChartHalfVC.swift */; };
+		E346EC75219EC6A200861746 /* WaveformChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E346EC74219EC6A200861746 /* WaveformChartVC.swift */; };
 		E35A39B8214F668F002B545A /* LineChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35A39B7214F668F002B545A /* LineChartVC.swift */; };
 		E35A39BA214F66E9002B545A /* CombinedChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35A39B9214F66E9002B545A /* CombinedChartVC.swift */; };
 		E35A39BC214F6711002B545A /* ScatterChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35A39BB214F6711002B545A /* ScatterChartVC.swift */; };
@@ -55,6 +56,7 @@
 		80808BA9743F4CF4082C5819 /* Pods-ChartsUnderstandAndUsage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChartsUnderstandAndUsage.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChartsUnderstandAndUsage/Pods-ChartsUnderstandAndUsage.release.xcconfig"; sourceTree = "<group>"; };
 		8A8BDE7C0508A2EFCEA84120 /* Pods-ChartsUnderstandAndUsage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChartsUnderstandAndUsage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChartsUnderstandAndUsage/Pods-ChartsUnderstandAndUsage.debug.xcconfig"; sourceTree = "<group>"; };
 		E330184D2151FE3200151C8B /* PieChartHalfVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartHalfVC.swift; sourceTree = "<group>"; };
+		E346EC74219EC6A200861746 /* WaveformChartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveformChartVC.swift; sourceTree = "<group>"; };
 		E35A39B7214F668F002B545A /* LineChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartVC.swift; sourceTree = "<group>"; };
 		E35A39B9214F66E9002B545A /* CombinedChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinedChartVC.swift; sourceTree = "<group>"; };
 		E35A39BB214F6711002B545A /* ScatterChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatterChartVC.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				E35A39BB214F6711002B545A /* ScatterChartVC.swift */,
 				E35A39BF214F676B002B545A /* CandleStickChartVC.swift */,
 				E35A39BD214F6748002B545A /* BubbleChartVC.swift */,
+				E346EC74219EC6A200861746 /* WaveformChartVC.swift */,
 				E38958452149054700B960CD /* Main.storyboard */,
 				E38958482149054800B960CD /* Assets.xcassets */,
 				E389584A2149054800B960CD /* LaunchScreen.storyboard */,
@@ -378,6 +381,7 @@
 				E3800A812178579E007C9744 /* BaseVC.swift in Sources */,
 				E3C36A5F2150FF1B00439354 /* BalloonMarker.swift in Sources */,
 				E330184E2151FE3200151C8B /* PieChartHalfVC.swift in Sources */,
+				E346EC75219EC6A200861746 /* WaveformChartVC.swift in Sources */,
 				E35A39B8214F668F002B545A /* LineChartVC.swift in Sources */,
 				E3800A8621785EDC007C9744 /* PieChartPolylineVC.swift in Sources */,
 				E3895870214909D300B960CD /* ZHFColor.swift in Sources */,
