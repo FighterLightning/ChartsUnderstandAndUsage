@@ -20,7 +20,9 @@ class PieChartVC: BaseVC {
         //添加饼状图
         addPieChart()
         //设置基本样式
-        setBarChartViewBaseStyle()
+        setPieChartViewBaseStyle()
+        //3.添加（刷新数据）
+        updataData()
     }
     //添加饼状图
     func addPieChart(){
@@ -32,7 +34,7 @@ class PieChartVC: BaseVC {
         //刷新按钮响应
         refreshrBtn.addTarget(self, action: #selector(updataData), for: UIControlEvents.touchUpInside)
     }
-    func setBarChartViewBaseStyle(){
+    func setPieChartViewBaseStyle(){
         //基本样式
         pieChartView.setExtraOffsets(left: 30, top: 30, right: 30, bottom: 0)//饼状图距离边缘的间隙
         pieChartView.usePercentValuesEnabled = true//是否根据所提供的数据, 将显示数据转换为百分比格式
@@ -71,13 +73,8 @@ class PieChartVC: BaseVC {
         l.verticalAlignment = Legend.VerticalAlignment.top
         l.orientation = Legend.Orientation.horizontal //水平布局
         l.formSize = 12;//图示大小
-        //为饼状图提供数据
-        self.data = setData()
-        pieChartView.data = self.data;
-        //设置动画效果
-        pieChartView.animate(xAxisDuration: 1, easingOption: ChartEasingOption.easeOutExpo)
     }
-    func setData() -> PieChartData{
+    @objc func updataData(){
         //对应x轴上面需要显示的数据
         let count = 5
         //对应Y轴上面需要显示的数据
@@ -114,11 +111,7 @@ class PieChartVC: BaseVC {
         data.setValueFormatter(forma)
         data.setValueFont(UIFont.systemFont(ofSize: 10))
         data.setValueTextColor(ZHFColor.orange)
-        return data
-    }
-    @objc func updataData(){
-        self.data = setData()
-        pieChartView.data = self.data
+        pieChartView.data = data
         pieChartView.animate(xAxisDuration: 1, easingOption: ChartEasingOption.easeOutExpo)
     }
 }

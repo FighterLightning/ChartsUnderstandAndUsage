@@ -17,9 +17,8 @@ class LineChartVC: BaseVC {
     var lineChartView: LineChartView  = LineChartView()
     override func viewDidLoad() {
         super.viewDidLoad()
-        //1.添加折线
+        //添加折线
         addLineChart()
-        //2. 基本样式
         //折线图描述文字和样式
         chartDescription()
         //设置交互样式
@@ -32,8 +31,7 @@ class LineChartVC: BaseVC {
         setYAxisStyle()
         //设置限制线（可设置多根）
         setlimitLine()
-        
-        //3.添加（刷新数据）
+        //添加（刷新数据）
         updataData()
     }
 }

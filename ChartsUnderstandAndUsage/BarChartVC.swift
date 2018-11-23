@@ -26,7 +26,8 @@ class BarChartVC: BaseVC {
         setBarChartViewBaseStyle()
         //设置X轴，Y轴样式
         setBarChartViewXY()
-        
+        //添加（刷新数据）
+        updataData()
     }
     //添加柱状图
     func addBarChartView(){
@@ -115,12 +116,9 @@ class BarChartVC: BaseVC {
         legend.orientation = .horizontal
         legend.textColor = ZHFColor.orange
         legend.font = UIFont.systemFont(ofSize: 11.0)
-        
-        self.data = setData()
-        barChartView.data = self.data
-        barChartView.animate(yAxisDuration: 1)//展示方式xAxisDuration 和 yAxisDuration两种
     }
-    func setData() -> BarChartData{
+    //设置数据
+    @objc func updataData(){
         //对应x轴上面需要显示的数据
         let count = 8
         let x1Vals: NSMutableArray  = NSMutableArray.init()
@@ -155,12 +153,9 @@ class BarChartVC: BaseVC {
         formatter.numberStyle = NumberFormatter.Style.currency//自定义数据显示格式  小数点形式(可以尝试不同看效果)
         let forma :DefaultValueFormatter = DefaultValueFormatter.init(formatter: formatter)
         data.setValueFormatter(forma)
-        return data
-    }
-    @objc func updataData(){
-         self.data = setData()
-         barChartView.data = self.data
-         barChartView.notifyDataSetChanged()
+        barChartView.data = data
+        barChartView.animate(yAxisDuration: 1)//展示方式xAxisDuration 和 yAxisDuration两种
+       //  barChartView.animate(xAxisDuration: 2, yAxisDuration: 2)//展示方式xAxisDuration 和 yAxisDuration两种
     }
 }
 //MARK:-   <ChartViewDelegate代理方法实现>

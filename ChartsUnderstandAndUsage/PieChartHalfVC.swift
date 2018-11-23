@@ -20,7 +20,7 @@ class PieChartHalfVC: BaseVC {
         //1.添加饼状图
         addPieChart()
         //2.设置基本样式
-        setBarChartViewBaseStyle()
+        setPieChartViewBaseStyle()
         //3.添加（刷新数据）
         updataData()
     }
@@ -34,7 +34,7 @@ class PieChartHalfVC: BaseVC {
         //刷新按钮响应
         refreshrBtn.addTarget(self, action: #selector(updataData), for: UIControlEvents.touchUpInside)
     }
-    func setBarChartViewBaseStyle(){
+    func setPieChartViewBaseStyle(){
         //基本样式
         pieChartView.setExtraOffsets(left: 30, top: 30, right: 30, bottom: 0)//饼状图距离边缘的间隙
         pieChartView.usePercentValuesEnabled = true//是否根据所提供的数据, 将显示数据转换为百分比格式

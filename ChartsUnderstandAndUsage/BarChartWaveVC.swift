@@ -25,7 +25,8 @@ class BarChartWaveVC: BaseVC {
         setBarChartViewBaseStyle()
         //设置X轴，Y轴样式
         setBarChartViewXY()
-        
+        //添加（刷新数据）
+        updataData()
     }
     //添加柱状图
     func addBarChartView(){
@@ -91,12 +92,9 @@ class BarChartWaveVC: BaseVC {
         legend.orientation = .horizontal
         legend.textColor = ZHFColor.orange
         legend.font = UIFont.systemFont(ofSize: 11.0)
-        
-        self.data = setData(count: 150)
-        barChartView.data = self.data
-        barChartView.animate(xAxisDuration: 2, yAxisDuration: 2)//展示方式xAxisDuration 和 yAxisDuration两种
     }
-    func setData(count: NSInteger) -> BarChartData{
+    @objc func updataData(){
+         let count: NSInteger = NSInteger(arc4random_uniform(UInt32(150)) + 100)
         let entries = (0 ..< count).map {
             BarChartDataEntry(x: Double($0), y: sin(.pi * Double($0%128) / 64))
         }
@@ -108,15 +106,8 @@ class BarChartWaveVC: BaseVC {
         data.setValueFont(.systemFont(ofSize: 10, weight: .light))
         data.setDrawValues(false)
         data.barWidth = 0.8
-        
         barChartView.data = data
-        return data
-    }
-    @objc func updataData(){
-        let count: NSInteger = NSInteger(arc4random_uniform(UInt32(150)) + 100)
-        self.data = setData(count:count)
-        barChartView.data = self.data
-        barChartView.notifyDataSetChanged()
+        barChartView.animate(xAxisDuration: 2, yAxisDuration: 2)//展示方式xAxisDuration 和 yAxisDuration两种
     }
 }
 //MARK:-   <ChartViewDelegate代理方法实现>
