@@ -38,7 +38,7 @@ extension CombinedChartVC{
         combinedChartView.delegate = self
         self.view.addSubview(combinedChartView)
         //刷新按钮响应
-        refreshrBtn.addTarget(self, action: #selector(updataData), for: UIControlEvents.touchUpInside)
+        refreshrBtn.addTarget(self, action: #selector(updataData), for: .touchUpInside)
     }
     func setCombinedChartViewBaseStyle(){
         //混合图描述

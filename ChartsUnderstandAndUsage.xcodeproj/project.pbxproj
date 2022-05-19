@@ -28,10 +28,11 @@
 		E38958622149054800B960CD /* ChartsUnderstandAndUsageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38958612149054800B960CD /* ChartsUnderstandAndUsageUITests.swift */; };
 		E3895870214909D300B960CD /* ZHFColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E389586F214909D300B960CD /* ZHFColor.swift */; };
 		E3895872214910AC00B960CD /* BarChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3895871214910AC00B960CD /* BarChartVC.swift */; };
-		E389587421491CFF00B960CD /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E389587321491CFF00B960CD /* Charts.framework */; };
 		E3895878214A521B00B960CD /* PieChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3895877214A521B00B960CD /* PieChartVC.swift */; };
 		E389587A214A650A00B960CD /* RadarChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3895879214A650A00B960CD /* RadarChartVC.swift */; };
 		E3C36A5F2150FF1B00439354 /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C36A5E2150FF1B00439354 /* BalloonMarker.swift */; };
+		FA3EAA12283639D600964992 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA3EAA11283639D600964992 /* Charts.framework */; };
+		FA3EAA1528363E5E00964992 /* Pods_ChartsUnderstandAndUsage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2986C8E69D024580F6229424 /* Pods_ChartsUnderstandAndUsage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,20 @@
 			remoteInfo = ChartsUnderstandAndUsage;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FA3EAA14283639D600964992 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FA3EAA1528363E5E00964992 /* Pods_ChartsUnderstandAndUsage.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2986C8E69D024580F6229424 /* Pods_ChartsUnderstandAndUsage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChartsUnderstandAndUsage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +100,8 @@
 		E3895877214A521B00B960CD /* PieChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartVC.swift; sourceTree = "<group>"; };
 		E3895879214A650A00B960CD /* RadarChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarChartVC.swift; sourceTree = "<group>"; };
 		E3C36A5E2150FF1B00439354 /* BalloonMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
+		FA3EAA0D283639BE00964992 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA3EAA11283639D600964992 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +109,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E389587421491CFF00B960CD /* Charts.framework in Frameworks */,
 				094F73FE91B1045A7744156A /* Pods_ChartsUnderstandAndUsage.framework in Frameworks */,
+				FA3EAA12283639D600964992 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +134,8 @@
 		C5ADDC9AD4F5D81F60A4FA36 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA3EAA11283639D600964992 /* Charts.framework */,
+				FA3EAA0D283639BE00964992 /* Charts.framework */,
 				E389587321491CFF00B960CD /* Charts.framework */,
 				2986C8E69D024580F6229424 /* Pods_ChartsUnderstandAndUsage.framework */,
 			);
@@ -213,6 +232,7 @@
 				E389583B2149054700B960CD /* Frameworks */,
 				E389583C2149054700B960CD /* Resources */,
 				1310E3972A00FA57A6DA7B17 /* [CP] Embed Pods Frameworks */,
+				FA3EAA14283639D600964992 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -266,7 +286,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1320;
 				ORGANIZATIONNAME = "张海峰";
 				TargetAttributes = {
 					E389583D2149054700B960CD = {
@@ -335,17 +355,14 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ChartsUnderstandAndUsage/Pods-ChartsUnderstandAndUsage-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+			inputFileListPaths = (
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+			outputFileListPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChartsUnderstandAndUsage/Pods-ChartsUnderstandAndUsage-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChartsUnderstandAndUsage/Pods-ChartsUnderstandAndUsage-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		379ADA5B89F08EA9DC8140D4 /* [CP] Check Pods Manifest.lock */ = {
@@ -471,6 +488,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -496,7 +514,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -531,6 +549,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -550,7 +569,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -565,15 +584,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KF97C6R67W;
+				DEVELOPMENT_TEAM = 8CB6874GM5;
 				INFOPLIST_FILE = ChartsUnderstandAndUsage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lighting.com;
+				PRODUCT_BUNDLE_IDENTIFIER = ChartsUnderstandAndUsage.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -584,15 +604,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KF97C6R67W;
+				DEVELOPMENT_TEAM = 8CB6874GM5;
 				INFOPLIST_FILE = ChartsUnderstandAndUsage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lighting.com;
+				PRODUCT_BUNDLE_IDENTIFIER = ChartsUnderstandAndUsage.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -610,9 +631,9 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lighting.com.ChartsUnderstandAndUsageTests;
+				PRODUCT_BUNDLE_IDENTIFIER = ChartsUnderstandAndUsage.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChartsUnderstandAndUsage.app/ChartsUnderstandAndUsage";
 			};
@@ -631,9 +652,9 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lighting.com.ChartsUnderstandAndUsageTests;
+				PRODUCT_BUNDLE_IDENTIFIER = ChartsUnderstandAndUsage.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChartsUnderstandAndUsage.app/ChartsUnderstandAndUsage";
 			};
@@ -651,9 +672,9 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lighting.com.ChartsUnderstandAndUsageUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = ChartsUnderstandAndUsage.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = ChartsUnderstandAndUsage;
 			};
@@ -671,9 +692,9 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lighting.com.ChartsUnderstandAndUsageUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = ChartsUnderstandAndUsage.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = ChartsUnderstandAndUsage;
 			};

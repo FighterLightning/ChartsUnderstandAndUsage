@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         self.addTableView()
     }
     func addTableView(){
-        tableView = UITableView.init(frame: CGRect.init(x: 0, y: 44, width: ScreenWidth, height: ScreenHeight - 44), style: UITableViewStyle.plain)
+        tableView = UITableView.init(frame: CGRect.init(x: 0, y: 44, width: ScreenWidth, height: ScreenHeight - 44), style: .plain)
         self.view.addSubview(tableView)
         tableView.backgroundColor = ZHFColor.zhff9_backGroundColor
         tableView.separatorColor = ZHFColor.zhf_strColor(hex: "cccccc")
@@ -63,7 +63,7 @@ extension ViewController :UITableViewDataSource,UITableViewDelegate
         let itemMessage = self.ItemMessages[indexPath.row]
         var cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
         if cell == nil {
-            cell = UITableViewCell(style:UITableViewCellStyle.subtitle, reuseIdentifier: "Cell")
+            cell = UITableViewCell(style:.subtitle, reuseIdentifier: "Cell")
         }
         cell?.textLabel?.text = itemMessage.title
         cell?.textLabel?.textColor = ZHFColor.red
@@ -71,7 +71,7 @@ extension ViewController :UITableViewDataSource,UITableViewDelegate
         cell?.detailTextLabel?.textColor = ZHFColor.zhf66_contentTextColor
         cell?.detailTextLabel?.numberOfLines = 0
         cell?.imageView?.image = UIImage.init(named: itemMessage.imageName)
-        cell?.selectionStyle = UITableViewCellSelectionStyle.none
+        cell?.selectionStyle = .none
         return cell!
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

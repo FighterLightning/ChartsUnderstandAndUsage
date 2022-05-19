@@ -31,7 +31,7 @@ class LineFilledChartVC: BaseVC {
             lineChartView.delegate = self
             self.view.addSubview(lineChartView)
             //刷新按钮响应
-            refreshrBtn.addTarget(self, action: #selector(updataData), for: UIControlEvents.touchUpInside)
+            refreshrBtn.addTarget(self, action: #selector(updataData), for: .touchUpInside)
         }
         //基本样式
         func setLineChartViewBaseStyle(){

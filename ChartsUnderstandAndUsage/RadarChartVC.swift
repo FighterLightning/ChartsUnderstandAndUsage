@@ -32,7 +32,7 @@ class RadarChartVC: BaseVC {
         radarChartView.delegate = self
         self.view.addSubview(radarChartView)
         //刷新按钮响应
-        refreshrBtn.addTarget(self, action: #selector(updataData), for: UIControlEvents.touchUpInside)
+        refreshrBtn.addTarget(self, action: #selector(updataData), for: .touchUpInside)
     }
     func setRadarChartViewBaseStyle(){
         //雷达图描述

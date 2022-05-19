@@ -45,7 +45,7 @@ extension LineChartVC{
         lineChartView.delegate = self
         self.view.addSubview(lineChartView)
         //刷新按钮响应
-        refreshrBtn.addTarget(self, action: #selector(updataData), for: UIControlEvents.touchUpInside)
+        refreshrBtn.addTarget(self, action: #selector(updataData), for: .touchUpInside)
     }
     //设置交互样式
     func interactionStyle(){

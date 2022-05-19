@@ -33,7 +33,7 @@ extension ScatterChartVC{
         scatterChartView.delegate = self
         self.view.addSubview(scatterChartView)
         //刷新按钮响应
-        refreshrBtn.addTarget(self, action: #selector(updataData), for: UIControlEvents.touchUpInside)
+        refreshrBtn.addTarget(self, action: #selector(updataData), for: .touchUpInside)
     }
     func setScatterChartViewBaseStyle(){
         //散点图描述

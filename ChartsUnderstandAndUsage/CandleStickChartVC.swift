@@ -33,7 +33,7 @@ extension CandleStickChartVC{
         candleStickChartView.delegate = self
         self.view.addSubview(candleStickChartView)
         //刷新按钮响应
-        refreshrBtn.addTarget(self, action: #selector(updataData), for: UIControlEvents.touchUpInside)
+        refreshrBtn.addTarget(self, action: #selector(updataData), for: .touchUpInside)
     }
     func setCandleStickChartViewBaseStyle(){
         //K 线图（烛形图）描述

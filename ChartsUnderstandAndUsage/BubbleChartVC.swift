@@ -33,7 +33,7 @@ extension BubbleChartVC{
         bubbleChartView.delegate = self
         self.view.addSubview(bubbleChartView)
         //刷新按钮响应
-        refreshrBtn.addTarget(self, action: #selector(updataData), for: UIControlEvents.touchUpInside)
+        refreshrBtn.addTarget(self, action: #selector(updataData), for: .touchUpInside)
     }
     func setBubbleChartViewBaseStyle(){
         //气泡图描述

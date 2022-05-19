@@ -37,7 +37,7 @@ class BarChartVC: BaseVC {
         barChartView.delegate = self
         self.view.addSubview(barChartView)
         //刷新按钮响应
-        refreshrBtn.addTarget(self, action: #selector(updataData), for: UIControlEvents.touchUpInside)
+        refreshrBtn.addTarget(self, action: #selector(updataData), for: .touchUpInside)
     }
     func setBarChartViewBaseStyle(){
         //基本样式

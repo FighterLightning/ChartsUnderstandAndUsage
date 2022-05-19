@@ -32,7 +32,7 @@ class PieChartPolylineVC: BaseVC {
         pieChartView.delegate = self
         self.view.addSubview(pieChartView)
         //刷新按钮响应
-        refreshrBtn.addTarget(self, action: #selector(updataData), for: UIControlEvents.touchUpInside)
+        refreshrBtn.addTarget(self, action: #selector(updataData), for: .touchUpInside)
     }
     func setPieChartViewBaseStyle(){
         //基本样式
@@ -53,7 +53,7 @@ class PieChartPolylineVC: BaseVC {
             pieChartView.centerText = "饼状图"
             //富文本
             //            let centerText : NSMutableAttributedString = NSMutableAttributedString.init(string: "饼状图")
-            //            centerText.setAttributes([NSAttributedStringKey.font : UIFont.boldSystemFont(ofSize: 15),NSAttributedStringKey.foregroundColor: ZHFColor.green], range: NSRange.init(location: 0, length: centerText.length))
+            //            centerText.setAttributes([NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15),NSAttributedString.Key.foregroundColor: ZHFColor.green], range: NSRange.init(location: 0, length: centerText.length))
             //            pieChartView.centerAttributedText = centerText
         }
         else{}
